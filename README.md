@@ -24,3 +24,20 @@ lake env lean VerifyAxioms.lean
 The axiom audit checks all three declarations transitively. Each is expected to depend only on `propext`, `Classical.choice`, and `Quot.sound`. The audit exits with an error if it finds any other axiom, including `sorryAx`.
 
 The Brownian motion construction, Kolmogorov extension, and Donsker proof are bundled under [`vendor/`](vendor/README.md), with upstream references and license files.
+
+## Fixed-window interface for coupled Q-learning
+
+`import Qlearning` adds the fixed-positive-window noise theorem, the physical
+speed/action conversion, the shared-driver contraction interface, the
+arbitrary-step counting and speed lemmas, and the superexponential
+maximum-increment and tracking lemmas. The existing Mogulskii proof is reused.
+
+See [QLEARNING_COVERAGE.md](QLEARNING_COVERAGE.md) for exact statements and the
+connections that remain outside this extension. In particular, the specific
+Bellman ODE continuity and Euler bounds are explicit inputs, and the
+reindexed canonical paths are not silently identified with actual off-grid paths.
+
+```sh
+lake build Qlearning
+lake env lean VerifyQlearningAxioms.lean
+```

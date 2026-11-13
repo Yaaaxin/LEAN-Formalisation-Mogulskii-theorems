@@ -1,0 +1,62 @@
+{
+  "lean": "4.32.1",
+  "mathlib": "520045ab14e26149ee970e2e617ca04b09bde5d6",
+  "upstream_base": "83a54ac6c89a0ad1ea09ff2902c46d5f45b8b436",
+  "build_command": "lake build Qlearning",
+  "audit_command": "lake env lean VerifyQlearningAxioms.lean",
+  "build_passed": true,
+  "audit_passed": true,
+  "declarations": {
+    "Qlearning.iid_fixedWindow_mogulskii": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Qlearning.controlledWindow_mogulskii": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Qlearning.windowLDP_arbitrary_steps": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Qlearning.maximum_increment_superexponential": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Qlearning.tracking_implies_superexponential": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Qlearning.exponentialBounds_of_equivalent": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Qlearning.euler_fixedWindow_LDP": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Qlearning.iid_canonical_smallStep_mogulskii": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "source_sha256": {
+    "Qlearning.lean": "af30ae378c13813d4ba43d196070b2a3dd167cb4cf3babc7ab78e35337aff4fb",
+    "Qlearning/MogulskiiWindow.lean": "b6f44d65db8d9727d5a755b4500ccee1288703be6bca40b84a4ec9e2939fb9b7",
+    "Qlearning/SmallStep.lean": "2b35f6a3b6203b9817ad4c5482b70a0e7b901a30418f6e66aa96f4560b2a77fe",
+    "Qlearning/Tracking.lean": "1ba038ca13198dd7be807d68c350ee02756708b391077c4adc76b8b5ef4cc2d2",
+    "VerifyQlearningAxioms.lean": "432ff5ddec896dd4ec88713f16e3e793d14497f0c675e310ececde5bf001133f",
+    "lakefile.toml": "3a14fdf1696f447f32fb2e22242f5966e67a4ce375326fc8a34e0b0f10cbb15d",
+    "lake-manifest.json": "de2a8d6df3829057605df00ab31c5b432fff5eca56b4cdad4d59e072b42fc584",
+    "lean-toolchain": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af"
+  },
+  "scope": "Fixed-window and canonical-reference probability results, with explicit deterministic solution-map and tracking hypotheses. Actual off-grid path identification and concrete Bellman ODE estimates are not certified."
+}
