@@ -29,13 +29,14 @@ The Brownian motion construction, Kolmogorov extension, and Donsker proof are bu
 
 `import Qlearning` adds the fixed-positive-window noise theorem, the physical
 speed/action conversion, the shared-driver contraction interface, the
-arbitrary-step counting and speed lemmas, and the superexponential
-maximum-increment and tracking lemmas. The existing Mogulskii proof is reused.
+arbitrary-step counting and speed lemmas, the actual off-grid noise theorem,
+and the superexponential maximum-increment and tracking lemmas. The existing Mogulskii proof is reused.
 
 See [QLEARNING_COVERAGE.md](QLEARNING_COVERAGE.md) for exact statements and the
 connections that remain outside this extension. In particular, the specific
-Bellman ODE continuity and Euler bounds are explicit inputs, and the
-reindexed canonical paths are not silently identified with actual off-grid paths.
+Bellman ODE continuity and Euler bounds are explicit inputs. The comparison
+between the reference and actual off-grid paths is proved, including its uniform
+error bound and its exponential-equivalence consequence.
 
 ```sh
 lake build Qlearning

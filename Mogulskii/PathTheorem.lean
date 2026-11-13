@@ -39,7 +39,7 @@ theorem cramerRateLaw_map_eq {Ω : Type*} [MeasurableSpace Ω] {μ : Measure Ω}
     exact le_iSup_of_le (InnerProductSpace.toDual ℝ _ θ) (by
       simp only [InnerProductSpace.toDual_apply_apply, le_refl])
 
-private theorem polygon_eq_interpolate {Ω E : Type*}
+theorem polygon_eq_interpolate {Ω E : Type*}
     [NormedAddCommGroup E] [NormedSpace ℝ E]
     (X : ℕ → Ω → E) (n : ℕ) (ω : Ω) (t : UnitTime) :
     polygon n (fun i => X i ω) t = interpolate X n ω t := by
